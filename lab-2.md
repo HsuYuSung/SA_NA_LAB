@@ -19,7 +19,7 @@ services:
                 image: frontend
                 container_name: frontend
                 environment:
-                        - HOSTIP=10.100.100.49
+                        HOSTIP=10.100.100.49
                 ports:
                         - 8080:8083
         text:
