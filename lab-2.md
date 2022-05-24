@@ -36,6 +36,33 @@ services:
 ```
 3. `sudo docker-compose up`
 
+## Other method
+
+Write `docker-compose.yml`
+
+```yml
+version: '3.3'
+services:
+        frontend:
+                container_name: frontend
+                build: ./frontend/
+                ports:
+                        - 8080:8083
+                environment:
+                        HOSTIP: 192.168.229.161
+        text:
+                container_name: text
+                build: ./text/
+        list:
+                container_name: list
+                build: ./list
+        img:
+                container_name: img
+                build: ./img
+                ports:
+                        - 8081:8081
+```
+
 ## Test
 
 1. 
