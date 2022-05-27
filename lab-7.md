@@ -6,7 +6,7 @@
 
  
 將 VM 的 Host name 設為 switch 並 在 VM 上新增兩 個 interfaces 將其依序命名
-為 lan1 lan2 ””  將  兩 個 interfaces bridge 起來並將 bridge interface name 設為
+為 "lan1" "lan2"  將  兩 個 interfaces bridge 起來並將 bridge interface name 設為
 LAN 並參 附  A 設定 IP address
 
 
