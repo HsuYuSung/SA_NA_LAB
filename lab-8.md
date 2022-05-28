@@ -59,13 +59,12 @@ p76091543@gw:~$
 
 ### Step4 change name
 
-```bash
+```yaml
 # gw
 network:
   ethernets:
     ens33:
-      dhcp4: false
-      addresses: [192.168.229.144/24]
+      dhcp4: true
     lan:
             dhcp4: false
             addresses: [192.168.3.154/24]
@@ -75,19 +74,22 @@ network:
   version: 2
 ```
 
-```bash
+```yaml
+# clt
 # This is the network config written by 'subiquity'
 network:
   ethernets:
-    ens33:
-      dhcp4: false
-      addresses: [192.168.229.145/24]
     eth0:
-		dhcp4: false
-		addresses: [192.168.3.100/24]
-		match:
-				macaddress: "00:0c:29:00:28:c7"
-		set-name: eth0
+            dhcp4: true
+            addresses: [192.168.3.100/24]
+            nameservers:
+                    addresses: [10.100.100.254]
+            routes:
+                    - to: default
+                      via: 192.168.3.254
+            match:
+                    macaddress: "00:0c:29:2c:b5:a0"
+            set-name: eth0
   version: 2
 ```
 
